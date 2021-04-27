@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  title: `Pagina Web de Preparacion para el Examen`,
+  title: `WebPortus`,
 };
 
 /*
