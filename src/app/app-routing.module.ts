@@ -10,6 +10,13 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
+    path: `acerca`,
+    loadChildren: () =>
+      import("src/app/comunes/acerca/acerca.module").then(
+        (m) => m.AcercaModule
+      ),
+  },
+  {
     path: `**`,
     redirectTo: `not-found`,
   },
