@@ -1,8 +1,7 @@
 export interface Persona {
-  car: {
-    nombre: string;
-    mail: string;
-    nif: string;
-    telefono: number;
-  };
+  nombre: string;
+  mail: string;
+  nif: string;
+  telefono: number;
+  situacionLaboral: string;
 }
