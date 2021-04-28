@@ -24,6 +24,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: `partidos`,
+    loadChildren: () =>
+      import("src/app/ejercicios/partidos/partidos.module").then(
+        (m) => m.PartidosModule
+      ),
+  },
+  {
     path: `**`,
     redirectTo: `not-found`,
   },
