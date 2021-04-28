@@ -1,9 +1,17 @@
 <header class="row">
-  <div class="col-8">
+  <div class="col-8 p-2">
     <ul class="nav nav-tabs">
       <li class="nav-item">
         <a class="nav-link active" routerLink="">Home</a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="formulario">Formulario</a>
+      </li>
+
+      <!-- <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li> -->
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
@@ -14,19 +22,23 @@
           <a class="dropdown-item" routerLink="acerca/contacto">Contacto</a>
         </div>
       </li>
-
-      <!-- <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#">Disabled</a>
-  </li> -->
     </ul>
   </div>
-  <div class="col-4 alert-dark">
-    <h4>
-      {{ titulo }}
-    </h4>
+  <div class="col-4 alert-dark p-3 text-center">
+    <div class="row">
+      <h4 class="col-9">
+        <a routerLink="">
+          {{ titulo }}
+        </a>
+      </h4>
+      <div class="col-3">
+        <img
+          src="./assets/67713310.jpeg"
+          class="rounded-circle"
+          alt=""
+          style="width: 60px"
+        />
+      </div>
+    </div>
   </div>
 </header>

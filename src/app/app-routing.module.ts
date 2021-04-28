@@ -17,6 +17,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: `formulario`,
+    loadChildren: () =>
+      import("src/app/comunes/formulario/formulario.module").then(
+        (m) => m.FormularioModule
+      ),
+  },
+  {
     path: `**`,
     redirectTo: `not-found`,
   },
