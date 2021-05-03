@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
+import { Partido } from "../../moduls/partido";
 
 @Component({
   selector: "app-partido",
@@ -6,6 +7,7 @@ import { Component, OnInit } from "@angular/core";
   styles: [],
 })
 export class PartidoComponent implements OnInit {
+  @Input() partido: Partido;
   public idLocal: string = ``;
   public idVisitante: string = ``;
   public competicion: string = ``;
@@ -18,6 +20,7 @@ export class PartidoComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
+    console.log(this.partido)
     this.idLocal = `local`;
     this.idVisitante = `visitante`;
     this.competicion = `laLiga`;
