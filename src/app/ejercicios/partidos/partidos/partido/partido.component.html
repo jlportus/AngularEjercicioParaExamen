@@ -1,11 +1,11 @@
 <p>partido works!</p>
 
 <div class="row">
-  <span> Partido de {{ competicion }} - &nbsp; </span>
-  <span [class]="claseObjeto"> local: {{ idLocal }} </span>
+  <span> Partido de {{ partido.competicion }} - &nbsp; </span>
+  <span [class]="claseObjeto"> local: {{ partido.idLocal }} </span>
   <span> &nbsp; {{ resultado }} &nbsp;</span>
   <span [ngClass]="{ 'alert alert-info': true, 'text-danger': true }">
-    {{ idVisitante }} :Visitante</span
+    {{ partido.idVisitante }} :Visitante</span
   >
   <input type="button" value="Mostrar Tarjetas" (click)="mostrarTarjetas()" />
   <span [class.d-none]="visibilidadTarjetas"> Tarjetas {{ tarjetas }}, {{estado}}</span>
