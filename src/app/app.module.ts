@@ -6,10 +6,11 @@ import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
 import { EsqueletoModule } from "./esqueleto/esqueleto.module";
 import { HomeModule } from "./comunes/home/home.module";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, EsqueletoModule, HomeModule, HttpClientModule ],
+  imports: [BrowserModule, AppRoutingModule, EsqueletoModule, HomeModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
