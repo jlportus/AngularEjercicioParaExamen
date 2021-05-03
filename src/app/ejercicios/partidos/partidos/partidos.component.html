@@ -1,2 +1,4 @@
 <p>partidos works!</p>
-<app-partido [partido]="arrayDepartidos[0]"></app-partido>
+<div *ngFor="let partidoPadre of arrayDepartidos">
+  <app-partido [partido]="partidoPadre"></app-partido>
+</div>
