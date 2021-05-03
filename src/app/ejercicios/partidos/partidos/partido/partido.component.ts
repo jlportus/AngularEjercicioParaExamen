@@ -11,7 +11,7 @@ export class PartidoComponent implements OnInit {
   @Input() partido: Partido;
 
   public resultado: string = ``;
-  public visibilidadTarjetas: boolean;
+  public visibilidadTarjetas: boolean = true;
   public tarjetas: string = ``;
   public claseObjeto = "alert alert-success";
   public estado: string = ``;
@@ -19,17 +19,15 @@ export class PartidoComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log(this.partido);
+    // console.log(this.partido.idCompeticion);
     this.resultado = this.calcularResultado();
-    console.log(this.resultado);
-
-    this.tarjetas = `8 tarjetas`;
+    // console.log(this.resultado);
   }
 
   public mostrarTarjetas(): void {
     this.visibilidadTarjetas = !this.visibilidadTarjetas;
-    console.log("esztas en el evento");
-    console.log(this.estado);
+    // console.log("esztas en el evento");
+    // console.log(this.estado);
   }
 
   calcularResultado(): string {
@@ -43,13 +41,13 @@ export class PartidoComponent implements OnInit {
   calcularEventosEquipo(idEquipo: string, evento: string): number {
     let numeroVecesEvento = 0;
     this.partido.sucesos.forEach((s: Suceso) => {
-      console.log(s);
-      console.log(s.idParticipante);
+      // console.log(s);
+      // console.log(s.idParticipante);
       if (s.class == evento && s.idParticipante == idEquipo) {
-        console.log(true);
+        // console.log(true);
         numeroVecesEvento++;
       } else {
-        console.log(false);
+        // console.log(false);
       }
     });
     return numeroVecesEvento;

@@ -14,6 +14,6 @@ export class PartidosComponent implements OnInit {
 
   ngOnInit() {
     this.arrayDepartidos = environment.partidos;
-    console.log(this.arrayDepartidos);
+    // console.log(this.arrayDepartidos);
   }
 }

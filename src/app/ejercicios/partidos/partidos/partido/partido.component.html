@@ -1,16 +1,25 @@
-<p>partido works!</p>
-
+<span> Partido de {{ partido.idCompeticion }} - &nbsp; </span>
 <div class="row">
-  <span> Partido de {{ partido.competicion }} - &nbsp; </span>
-  <span [class]="claseObjeto"> local: {{ partido.idLocal }} </span>
-  <span> &nbsp; {{ resultado }} &nbsp;</span>
-  <span [ngClass]="{ 'alert alert-info': true, 'text-danger': true }">
+  <span class="col-4" [class]="claseObjeto">
+    local: {{ partido.idLocal }}
+  </span>
+  <span class="col-2 text-center"> &nbsp; {{ resultado }} &nbsp;</span>
+  <span
+    class="col-3"
+    [ngClass]="{ 'alert alert-info': true, 'text-danger': true }"
+  >
     {{ partido.idVisitante }} :Visitante</span
   >
   <input type="button" value="Mostrar Tarjetas" (click)="mostrarTarjetas()" />
-  <span [class.d-none]="visibilidadTarjetas"> Tarjetas {{ tarjetas }}, {{estado}}</span>
-  <section>
-    <label for="estado">Estado</label>
-    <input type="text" name="estado" [(ngModel)]="estado" />
-  </section>
 </div>
+<!-- <span> Tarjetas {{ tarjetas }}, {{ estado }}</span>
+<section>
+  <label for="estado">Estado</label>
+  <input type="text" name="estado" [(ngModel)]="estado" />
+</section> -->
+<app-tarjeta
+  [class.d-none]="visibilidadTarjetas"
+  [sucesos]="partido.sucesos"
+  [idLocal]="partido.idLocal"
+  [idVisitante]="partido.idVisitante"
+></app-tarjeta>
